@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apple Seeds Developer Beta with Thermal and Kernel Fixes — YuhTech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">yuhtech</a>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">← Home</a>
+        <a href="ios.html" class="nav-link active">iOS</a>
+        <a href="apple.html" class="nav-link">Apple</a>
+      </nav>
+      <button id="theme-toggle" aria-label="Toggle theme">
+        <svg class="sun-icon" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" viewBox="0 0 24 24">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <article class="article-wrapper">
+    <header class="article-header">
+      <div class="meta-row">
+        <span class="category">iOS</span>
+        <span class="date">August 25, 2026</span>
+        <span class="read-time">3 min read</span>
+      </div>
+      <h1 class="article-title">Apple releases developer beta with major performance refinements</h1>
+      <p class="article-lead">
+        The latest developer build focuses heavily on core platform stability, addressing micro-stutters during heavy multitasking, optimizing memory compression, and lowering thermal output under sustained workloads.
+      </p>
+    </header>
+
+    <figure class="article-media">
+      <img src="pictures/ios27.jpeg" alt="iOS 27" class="article-banner" style="object-fit: cover;">
+      <figcaption class="image-source">Image: MacRumors</figcaption>
+    </figure>
+
+    <div class="article-content">
+      <p>
+        Apple has seeded a fresh build to registered developers today. While recent updates centered around feature introductions and visual polish, this build takes a direct focus on bug fixing and battery life optimization.
+      </p>
+
+      <h2>Key Improvements</h2>
+      <ul class="article-list">
+        <li><strong>Frame Drop Fixes:</strong> Resolved animation hitches when invoking ProMotion display scaling across system apps.</li>
+        <li><strong>Thermal Scheduling:</strong> Refined thread scheduling across efficiency and performance cores to keep devices running cooler.</li>
+        <li><strong>Memory Efficiency:</strong> Lowered background system process memory consumption by roughly 12%.</li>
+        <li><strong>Lock Screen Fluidity:</strong> Smoother transitions when switching customizable widget layouts.</li>
+      </ul>
+
+      <h2>Kernel & Memory Management</h2>
+      <p>
+        Developers who inspected early build logs noted significant changes in how background tasks are prioritized. Devices running heavy rendering processes or extended camera sessions should see less throttle intervention, maintaining consistent peak performance without generating unnecessary heat.
+      </p>
+
+      <blockquote class="pull-quote">
+        "Sustained performance metrics show a noticeable drop in core package temperatures during high GPU utilization."
+      </blockquote>
+
+      <p>
+        The update was released on 24.8.2026 at roughly 19:00 CEST.
+      </p>
+    </div>
+  </article>
+
+  <script src="script.js"></script>
+</body>
+</html>

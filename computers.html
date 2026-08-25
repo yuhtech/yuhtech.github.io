@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>computers — yuhtech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">yuhtech</a>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">← home</a>
+        <a href="ios.html" class="nav-link">ios</a>
+        <a href="android.html" class="nav-link">android</a>
+        <a href="apple.html" class="nav-link">apple</a>
+        <a href="computers.html" class="nav-link active">computers</a>
+      </nav>
+      <button id="theme-toggle" aria-label="Toggle theme">
+        <svg class="sun-icon" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" viewBox="0 0 24 24">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <header style="margin-bottom: 32px;">
+      <h1 style="font-size: 2.2rem; font-weight: 800; letter-spacing: -0.04em;">computers</h1>
+      <p style="color: var(--text-secondary); margin-top: 4px;">all the latest mac, pc, and desktop silicon news.</p>
+    </header>
+
+    <a href="article2.html" class="hero-card">
+      <div class="card-media">
+        <img src="pictures/m6macpro.jpg" alt="macbook lineup" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <div class="hero-content">
+        <div class="meta-row">
+          <span class="category">computers</span>
+          <span class="date">august 25, 2026</span>
+          <span class="read-time">3 min read</span>
+        </div>
+        <h2 class="hero-title">m6 macbook air and pro rumors point to 2nm process and 2027 lineup</h2>
+        <p class="hero-excerpt">
+          supply chain reports suggest apple is readying its next-generation m6 silicon, with updated macbook pro models targeted for late 2026 and refreshed macbook air models planned for early 2027.
+        </p>
+      </div>
+    </a>
+
+    <div class="news-grid">
+      <a href="article4.html" class="news-card">
+        <div class="card-media">
+          <img src="pictures/event26.jpg" alt="keynote hardware" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="card-content">
+          <div class="meta-row">
+            <span class="category">apple</span>
+            <span class="date">august 25, 2026</span>
+          </div>
+          <h3 class="card-title">official keynote scheduled for upcoming autumn hardware lineup</h3>
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

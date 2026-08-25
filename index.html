@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YuhTech — Tech News</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">yuhtech</a>
+      <nav class="nav">
+        <a href="#" class="nav-link active">Latest</a>
+        <a href="ios.html" class="nav-link">iOS</a>
+        <a href="android.html" class="nav-link">Android</a>
+        <a href="apple.html" class="nav-link">Apple</a>
+        <a href="computers.html" class="nav-link">Computers</a>
+      </nav>
+      <button id="theme-toggle" aria-label="Toggle theme">
+        <svg class="sun-icon" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" viewBox="0 0 24 24">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <a href="article1.html" class="hero-card">
+      <div class="card-media">
+        <img src="Pictures/ios27.jpeg" alt="iOS 27" class="media-placeholder" style="object-fit: cover;">
+      </div>
+      <div class="hero-content">
+        <div class="meta-row">
+          <span class="category">iOS</span>
+          <span class="date">August 25, 2026</span>
+        </div>
+        <h1 class="hero-title">Apple releases developer beta with major performance refinements</h1>
+        <p class="hero-excerpt">iOS27 Beta 7 delivers great speed refinements, battery life improvement, better Siri AI and various other bug fixes.</p>
+      </div>
+    </a>
+
+    <div class="news-grid">
+      
+      <a href="article2.html" class="news-card">
+        <div class="card-media">
+          <img src="Pictures/m6macpro.jpg" alt="MacBook Pro M6" class="media-placeholder" style="object-fit: cover;">
+        </div>
+        <div class="card-content">
+          <div class="meta-row">
+            <span class="category">Computers</span>
+            <span class="date">2h ago</span>
+          </div>
+          <h2 class="card-title">M6 MacBook Air and Pro rumors point to 2nm process and 2027 lineup</h2>
+        </div>
+      </a>
+
+      <a href="article3.html" class="news-card">
+        <div class="card-media">
+          <img src="Pictures/android17.jpg" alt="Android 17" class="media-placeholder" style="object-fit: cover;">
+        </div>
+        <div class="card-content">
+          <div class="meta-row">
+            <span class="category">Android</span>
+            <span class="date">4h ago</span>
+          </div>
+          <h2 class="card-title">Android 17 security patch begins rolling out across flagship hardware</h2>
+        </div>
+      </a>
+
+      <a href="article4.html" class="news-card">
+        <div class="card-media">
+          <img src="Pictures/event26.jpg" alt="Apple Event Sep 2026" class="media-placeholder" style="object-fit: cover;">
+        </div>
+        <div class="card-content">
+          <div class="meta-row">
+            <span class="category">Apple</span>
+            <span class="date">6h ago</span>
+          </div>
+          <h2 class="card-title">Official keynote scheduled for upcoming autumn hardware lineup</h2>
+        </div>
+      </a>
+
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
