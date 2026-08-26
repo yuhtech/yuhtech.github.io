@@ -42,50 +42,212 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Header */
 .header {
   position: sticky;
   top: 0;
-  z-index: 100;
-  background-color: var(--header-bg);
-  backdrop-filter: blur(100px) saturate(180%);
-  -webkit-backdrop-filter: blur(100px) saturate(180%);
-  border-bottom: 1px solid var(--border);
-  transition: background-color 0.3s var(--ease), border-color 0.3s var(--ease);
+  z-index: 1000;
+  width: 100%;
+  background: var(--header-bg, rgba(255, 255, 255, 0.75));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-color, rgba(0, 0, 0, 0.1));
+  transition: background-color 0.3s ease;
 }
 
 .header-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   max-width: 1080px;
   margin: 0 auto;
-  padding: 16px 20px;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .brand {
-  font-size: 1.3rem;
   font-weight: 800;
+  font-size: 1.25rem;
   letter-spacing: -0.03em;
-  text-decoration: none;
   color: var(--text-primary);
+  text-decoration: none;
+  flex-shrink: 0;
 }
 
+/* Horizontal Scrollable Nav */
 .nav {
   display: flex;
+  align-items: center;
   gap: 16px;
 }
 
 .nav-link {
-  text-decoration: none;
-  color: var(--text-secondary);
-  font-size: 0.9rem;
   font-weight: 500;
-  transition: color 0.2s var(--ease);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
   color: var(--text-primary);
+}
+
+#theme-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  flex-shrink: 0;
+}
+
+/* Mobile Breakpoint Fix */
+@media (max-width: 640px) {
+  .header-inner {
+    padding: 10px 16px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    row-gap: 10px;
+  }
+
+  .brand {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  #theme-toggle {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 12px;
+    padding-bottom: 4px;
+    margin: 0 -16px;
+    padding: 0 16px 4px 16px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-link {
+    font-size: 0.875rem;
+  }
+}.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: var(--header-bg, rgba(255, 255, 255, 0.75));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-color, rgba(0, 0, 0, 0.1));
+  transition: background-color 0.3s ease;
+}
+
+.header-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+/* Horizontal Scrollable Nav */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-link {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--text-primary);
+}
+
+#theme-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  flex-shrink: 0;
+}
+
+/* Mobile Breakpoint Fix */
+@media (max-width: 640px) {
+  .header-inner {
+    padding: 10px 16px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    row-gap: 10px;
+  }
+
+  .brand {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  #theme-toggle {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 12px;
+    padding-bottom: 4px;
+    margin: 0 -16px;
+    padding: 0 16px 4px 16px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-link {
+    font-size: 0.875rem;
+  }
 }
 
 /* Theme Toggle */
